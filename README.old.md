@@ -17,8 +17,8 @@ create-react-app .
     - для Git { "hooks": { "pre-commit": "lint-staged" } }
     - для GH Desktop { "hooks": { "pre-commit": "npx lint-staged" } }
 
-4.  - Создаём в корне файл .lintstagedrc
-    - Вставляем { "src/**/\*.{json,css,scss,md}": ["prettier --write"],
+4.  - Создаём в корне файл .lintstagedrc - Вставляем {
+      "src/**/\*.{json,css,scss,md}": ["prettier --write"],
       "src/**/\*.{js,jsx,ts,tsx}": ["prettier --write", "eslint --fix"] }
 
 5.  - Для комфортной работы, после установки плагинов, нужно добавить несколько
