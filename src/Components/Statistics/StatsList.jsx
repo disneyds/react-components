@@ -5,7 +5,7 @@ export default function StatsList({ items }) {
         return (
           <li className="item" key={item.id}>
             <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}</span>
+            <span className="percentage">"{item.percentage}"</span>
           </li>
         );
       })}

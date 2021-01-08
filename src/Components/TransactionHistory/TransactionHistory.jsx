@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export default function TransactionHistory({ items }) {
   return (
     <table className="transaction-history">
@@ -21,3 +22,10 @@ export default function TransactionHistory({ items }) {
     </table>
   );
 }
+
+TransactionHistory.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string,
+};
