@@ -7,10 +7,11 @@ import transactions from './transactions.json';
 import user from './user.json';
 import statisticalData from './statistical-data.json';
 import friends from './friends.json';
+import { Fragment } from 'react';
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Profile
         name={user.name}
         tag={user.tag}
@@ -21,8 +22,8 @@ function App() {
       <Statistics title="Upload stats" stats={statisticalData} />
       <Statistics stats={statisticalData} />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />;
-    </div>
+      <TransactionHistory items={transactions} />
+    </Fragment>
   );
 }
 
