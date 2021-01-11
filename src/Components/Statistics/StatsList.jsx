@@ -2,15 +2,15 @@ import s from './Statistics.module.css';
 export default function StatsList({ items }) {
   return (
     <ul className={s.statsList}>
-      {items.map(item => {
+      {items.map(({ id, label, percentage = 0 }) => {
         return (
           <li
             className={s.item}
             style={{ backgroundColor: rundomColor() }}
-            key={item.id}
+            key={id}
           >
-            <span className={s.lable}>{item.label}</span>
-            <span className={s.percentage}>{item.percentage}%</span>
+            <span className={s.lable}>{label}</span>
+            <span className={s.percentage}>{percentage}%</span>
           </li>
         );
       })}
